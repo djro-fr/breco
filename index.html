@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width" >
+        <title>Breco</title>
+        <link rel="stylesheet" href="./assets/css/normalize.css" >
+        <link rel="stylesheet" href="./assets/css/global.css" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    </head>
+    <body>
+        <div class="background"></div>
+        <header>
+            <nav>
+                <i class="iconBurger">
+                    <button type="button"></button>
+                </i>
+                <ul id="navList">
+                    <li><a href="./index.html">Accueil</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Breco</h1>
+            <section id="mainSection">
+                <div id="searchWindow">
+                    <h2>Vous recherchez</h2>
+                    <form action="#">
+                        <div id="trajet" class="whiteWindow">
+                            <div id="Depart">
+                                <div>
+                                    <label for="villeDepart">Depuis</label>
+                                    <input type="text" id="villeDepart" name="villeDepart" >
+                                </div>
+                                <div>
+                                    <label for="heureDepart">À</label>
+                                    <input type="text" id="heureDepart" name="heureDepart" >
+                                </div>
+                            </div>
+                            <div id="Duree"></div>
+                            <div id="Arrivee">
+                                <div>
+                                    <label for="villeArrivee">Depuis</label>
+                                    <input type="text" id="villeArrivee" name="villeArrivee" >
+                                </div>
+                                <div>
+                                    <label for="heureArrivee">À</label>
+                                    <input type="text" id="heureArrivee" name="heureArrivee" >
+                                </div>
+                            </div>
+                        </div>
+                        <div id="jours" class="whiteWindow">
+                        <input type="checkbox" id="J1" name="J1" ><label for="J1">Lun</label>
+                        <input type="checkbox" id="J2" name="J2" ><label for="J2">Mar</label>
+                        <input type="checkbox" id="J3" name="J3" ><label for="J3">Mer</label>
+                        <input type="checkbox" id="J4" name="J4" ><label for="J4">Jeu</label>
+                        <input type="checkbox" id="J5" name="J5" ><label for="J5">Ven</label>
+                        <input type="checkbox" id="J6" name="J6" ><label for="J6">Sam</label>
+                        <input type="checkbox" id="J7" name="J7" ><label for="J7">Dim</label>    
+                        </div>
+                        <button type="submit" class="search">Rechercher</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <script src="./assets/js/global.js"></script>
+    </body>
+</html>

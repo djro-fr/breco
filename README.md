@@ -1,4 +1,4 @@
-# breco - exercice projet
+# Breco (exercice projet)
 
 ## Présentation
 
@@ -11,3 +11,10 @@ L’application permettra par exemple à Thomas, qui réalise quotidiennement le
 Une autre utilisatrice, Alice qui habite à Vignoc pourra trouver le trajet de Thomas si les horaires coïncident car l’aire de Vignoc se trouve sur le trajet de Thomas.
 
 Attention, l’application a uniquement pour but de mettre en relation les utilisateurs et en aucune manière ne gérera la partie financière. Les utilisateurs pourront se mettre d’accord sur une participation financière ou sur un trajet alterné, mais cela ne fait pas partie du scope de ce projet.
+
+## Environnements et logiciels
+
+- Données stockées sur une base de données NoSQL **MongoDB**, via container **Docker**
+- Développement sous VSCode via **Flutter**, applications natives Android compilées sous **Android Studio**.
+- Backend réalisé en **PHP** avec une communication FrontEnd via des webservices (API REST) basés sur JSON.
+- Frontend réalisé en HTML/CSS/JS ou avec un framework.

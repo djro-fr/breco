@@ -1,0 +1,223 @@
+/* :::: COULEURS :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+:root{
+    --primary-color: #246EF0;
+    --primary-color-dark: #133B80;
+    --light-gray: #888;
+    --back-gray: #eeeeee;    
+    --green: #50a32a;
+    --dark-gray: #474747;
+}
+
+/* ---- CLASSES GENERALES -------------------------------------------------- */
+
+div.whiteWindow{
+    background-color: white;
+    border-radius: 5px;                    
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+html{        
+    font-family: Genos, Arial, sans-serif;
+}
+body{   
+    width: 100%;
+    height: 100%;
+    div.background{        
+        margin: 0 auto;  
+        width: 100%;
+        max-width: 360px;
+        height: 280px; 
+        background-image: url("../images/back.png");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+}
+header{
+    z-index: 10;
+    position: fixed;
+    top:0;
+    width: 100%;
+    nav{
+        i.iconBurger button{            
+            display: block;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            margin: 15px 0 0 15px;        
+            background-image: url("../images/burger.svg");            
+            background-size: cover;
+            background-color: transparent;
+            border: none;         
+        }
+        ul#navList{
+            display: none;        
+        }
+    }    
+    nav.open{        
+        width: 100%;
+        i.iconBurger button{       
+            background-image: url("../images/close.svg"); 
+        }
+        ul#navList{
+            display: block;
+            background-color: white;
+            width: 100%;
+            li {
+                list-style: none;
+                a{
+                    /*color: white;*/
+                    text-decoration: none;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+main{        
+    position: absolute;
+    top: 0;
+    display: block;
+    height: 100%;    
+    width: 100%;    
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    h1{            
+        text-align: center;
+        margin: 0;
+        font-size: 3.4em;
+        line-height: 3.4em;
+        display: block;        
+        color:white;
+    }
+    section#mainSection{
+        height: 100%;
+        width: 100%;
+        div#searchWindow{                   
+            position: absolute;                                    
+            height: 65%;                 
+            width: 100%;            
+            max-width: 360px;
+            margin-left: calc(50% - 180px);
+            bottom: 0;
+            display: block;
+            background-color: var(--back-gray) ;
+            border-radius: 20px 20px 0 0 ;       
+            h2{                
+                font-size: 2.25em;
+                text-align: center;
+                margin: 15px 0 15px;
+            }     
+            form{                                               
+                padding: 0 20px 10px;
+                div#trajet{
+                    padding: 0;
+                    width: 100%;
+                    margin: 0 auto;
+                    max-width: 360px;
+                    position: relative;
+                    >div{                        
+                        width: 100%;                                         
+                        padding: 20px;                               
+                        display: flex;
+                        flex-direction:row;                        
+                        >div{         
+                            width: 100%;                   
+                            display: flex;
+                            flex-direction: column;
+                            label{                                
+                                color: var(--green) ;
+                                font-size: 1.4em;
+                                font-weight: 600;
+                            }
+                            input{
+                                color: var(--dark-gray);
+                                font-size: 1.7em;
+                                outline: none;
+                                width: 100%;
+                                height: 25px;
+                                border: none;
+                            }
+                            input#villeDepart, input#villeArrivee{                                                                                                
+                                font-weight: 600;
+                                width: 90%;
+                            }
+                        }
+                        >div:first-child{                            
+                            width: 75%;
+                        }
+                        >div:last-child{                            
+                            width: 25%;
+                        }
+                    }                        
+                    div#Depart{
+                        border-bottom: 1px solid var(--dark-gray);
+                        width: calc(100% - 40px);
+                    }                    
+                    div#Duree{
+                        position: absolute;          
+                        font-size: 1.3em;
+                        display: inline;              
+                        padding: 2px 0 0 0 ;
+                        top: calc(50% - 15px);
+                        left: 33%;
+                        text-align: center;
+                        height: 28px;
+                        width: 34%;                        
+                        border-radius: 50px;                        
+                        background-color:  var(--dark-gray);
+                        color: white;
+                        font-weight: 600;
+                    }
+                    div#Arrivee{
+                        width: calc(100% - 40px);
+                    }
+                }
+                div#jours{
+                    padding: 10px;
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;  
+                    input[type="checkbox"]{
+                        display: none;
+                    }
+                    input[type="checkbox"] + label {
+                        cursor: pointer;
+                        border-bottom: 1px solid;
+                        font-size: 1.3em;                        
+                        color: var(--light-gray);    
+                        font-weight: 500;
+
+                    }
+                    input[type="checkbox"]:checked + label {
+                        color: var(--primary-color);                        
+                    }                
+                }
+                button.search{
+                    margin-top: 20px;
+                    width: 100%;
+                    height: 0px;
+                    border: 0;
+                    border-radius: 20px;                                       
+                    padding-bottom: 5px;                    
+                    height: 40px;
+                    background-color: var(--primary-color);
+                    letter-spacing: .02em;
+                    color: white;
+                    font-size: 1.8em;
+                    box-shadow: 0 3px 2px 0 var(--primary-color-dark);
+                }
+
+            }
+        }
+    }
+}
