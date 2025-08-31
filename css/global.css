@@ -30,7 +30,7 @@ body{
         width: 100%;
         max-width: 360px;
         height: 280px; 
-        background-image: url("../images/back.png");
+        background-image: url("../assets/images/back.png");
         background-repeat: no-repeat;
         background-position: center top;
         background-size: cover;
@@ -48,7 +48,7 @@ header{
             width: 32px;
             height: 32px;
             margin: 15px 0 0 15px;        
-            background-image: url("../images/burger.svg");            
+            background-image: url("../assets/images/burger.svg");            
             background-size: cover;
             background-color: transparent;
             border: none;         
@@ -60,7 +60,7 @@ header{
     nav.open{        
         width: 100%;
         i.iconBurger button{       
-            background-image: url("../images/close.svg"); 
+            background-image: url("../assets/images/close.svg"); 
         }
         ul#navList{
             display: block;
